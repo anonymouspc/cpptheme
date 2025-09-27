@@ -45,6 +45,10 @@
         {
             "match": ",",
             "name": "punctuation.separator.delimiter.comma.cpp"
+        },
+        {
+            "match": ";",
+            "name": "punctuation.terminator.statement.cpp"
         }
     ]
 }
