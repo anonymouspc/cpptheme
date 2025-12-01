@@ -9,3 +9,4 @@ catch (error) {
 }
 
 child_process.execSync("vsce publish patch")
+child_process.execSync("git push")
