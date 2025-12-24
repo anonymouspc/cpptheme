@@ -92,8 +92,8 @@
             "fontStyle": "bold"
         },
         "macro": {
-            "foreground": "#0080ff",
-            "fontStyle": "bold"
+            "foreground": "#c000ff",
+            "fontStyle": ""
         },
         "selfParameter": {
             "foreground": "#0080ff",
@@ -192,7 +192,6 @@
                 "entity.name.namespace",
                 "entity.name.scope-resolution",
                 "entity.name.type",
-                "entity.other.attribute",
                 "keyword.other.operator",
                 "storage.type",
                 "storage.type.template.argument",
@@ -240,6 +239,7 @@
         },
         {
             "scope": [
+                "entity.other.attribute",
                 "meta.preprocessor"
             ],
             "settings": {
