@@ -17,7 +17,7 @@ try {
    await fs.promises.rm(".tmp", {recursive: true, force: true})
 }
 
-// Update locale/cpp-zh-cn.json
+// Update locale/zh-cn.json
 try {
     await child_process.promises.exec("git clone https://github.com/microsoft/vscode-loc .tmp --depth 1")
     let json = JSON.parse((await fs.promises.readFile(".tmp/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json")).toString())
@@ -56,9 +56,9 @@ try {
     json["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyTree"]["from"]                      = "被调用 (called)"
     json["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyTree"]["to"]                        = "调用 (call)"
     json["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchy.contribution"]["title"]            = "查看类型层次结构"
-    await fs.promises.writeFile("locale/cpp-zh-cn.json", JSON.stringify(json, null, 4))
+    await fs.promises.writeFile("locale/zh-cn.json", JSON.stringify(json, null, 4))
 } catch (_) {
-    console.warn("warning: failed to update locale/cpp-zh-cn.json")
+    console.warn("warning: failed to update locale/zh-cn.json")
 } finally {
     await fs.promises.rm(".tmp", {recursive: true, force: true})
 }
