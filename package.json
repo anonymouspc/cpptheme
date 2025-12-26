@@ -9,8 +9,13 @@
 		"vscode": "^1.100.0"
 	},
 	"categories": [
+        "Language Packs",
 		"Themes"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/anonymouspc/cpptheme"
+	},
 	"contributes": {
 		"themes": [
 			{
@@ -60,10 +65,19 @@
 				],
 				"path": "grammar/punctuation.json"
 			}
-		]
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/anonymouspc/cpptheme"
+		],
+        "localizations": [
+            {
+                "languageId": "cpp-zh-cn",
+                "languageName": "C++ Chinese Simplified",
+                "localizedLanguageName": "C++ 中文(简体)",
+                "translations": [
+                    {
+                        "id": "vscode",
+                        "path": "locale/cpp-zh-cn.json"
+                    }
+                ]
+            }
+        ]
 	}
 }
