@@ -1,5 +1,5 @@
 struct B { 
-    virtual int func() { return 1; }
+    virtual int func();
     void haha() { }
 };
 
@@ -15,6 +15,10 @@ struct A
 int A::func() {
     B().haha();
     return 2;
+}
+
+int B::func() {
+    return 1;
 }
 
 int func() {
