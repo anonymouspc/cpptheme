@@ -4,6 +4,16 @@ import util from "util"
 child_process.promises = new Object()
 child_process.promises.exec = util.promisify(child_process.exec)
 
+// Helper
+function inplaceMerge(from, to) {
+    for (let key in from)
+        if (to[key] == undefined)
+            to[key] = from[key]
+        else
+            inplaceMerge(from[key], to[key])
+}
+
+
 // Git pull
 await child_process.promises.exec("git pull")
 
@@ -58,7 +68,7 @@ try {
     json["contents"]["vs/workbench/contrib/typeHierarchy/browser/typeHierarchy.contribution"]["title"]            = "查看类型层次结构"
     for await (let file of await fs.promises.opendir(".tmp/i18n/vscode-language-pack-zh-hans/translations/extensions")) {
         let subjson = JSON.parse((await fs.promises.readFile(`.tmp/i18n/vscode-language-pack-zh-hans/translations/extensions/${file.name}`)).toString())
-        json["contents"] = {...json["contents"], ...subjson["contents"]}
+        inplaceMerge(json["contents"], subjson["contents"])
     }
     await fs.promises.writeFile("locale/zh-cn.json", JSON.stringify(json, null, 4))
 } catch (_) {
