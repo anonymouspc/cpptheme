@@ -1,81 +1,81 @@
 {
-	"name": "cpptheme",
-	"displayName": "cpptheme",
-	"description": "cpptheme",
-	"icon": "share/package.png",
-	"publisher": "anonymouspc",
-	"version": "1.1.47",
-	"engines": {
-		"vscode": "^1.100.0"
-	},
-	"categories": [
-		"Language Packs",
-		"Themes"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/anonymouspc/cpptheme"
-	},
-	"contributes": {
-		"themes": [
-			{
-				"label": "cpptheme-light",
-				"uiTheme": "vs",
-				"path": "color/light.json"
-			},
-			{
-				"label": "cpptheme-dark",
-				"uiTheme": "vs-dark",
-				"path": "color/dark.json"
-			}
-		],
-		"productIconThemes": [
-			{
-				"label": "cpptheme-icon",
-				"id": "cpptheme-icon",
-				"path": "icon/icon.json"
-			}
-		],
-		"grammars": [
-			{
-				"scopeName": "module.injection",
-				"injectTo": [
-					"source.cpp"
-				],
-				"path": "grammar/module.json"
-			},
-			{
-				"scopeName": "noexcept.injection",
-				"injectTo": [
-					"source.cpp"
-				],
-				"path": "grammar/noexcept.json"
-			},
-			{
-				"scopeName": "preprocessor.injection",
-				"injectTo": [
-					"source.cpp"
-				],
-				"path": "grammar/preprocessor.json"
-			},
-			{
-				"scopeName": "punctuation.injection",
-				"injectTo": [
-					"source.cpp"
-				],
-				"path": "grammar/punctuation.json"
-			}
-		],
-		"localizations": [
-			{
-				"languageId": "zh-cn",
-				"translations": [
-					{
-						"id": "vscode",
-						"path": "locale/zh-cn.json"
-					}
-				]
-			}
-		]
-	}
+    "name": "cpptheme",
+    "displayName": "cpptheme",
+    "description": "cpptheme",
+    "icon": "share/package.png",
+    "publisher": "anonymouspc",
+    "version": "1.1.47",
+    "engines": {
+        "vscode": "^1.100.0"
+    },
+    "categories": [
+        "Language Packs",
+        "Themes"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/anonymouspc/cpptheme"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "cpptheme-light",
+                "uiTheme": "vs",
+                "path": "color/light.json"
+            },
+            {
+                "label": "cpptheme-dark",
+                "uiTheme": "vs-dark",
+                "path": "color/dark.json"
+            }
+        ],
+        "productIconThemes": [
+            {
+                "label": "cpptheme-icon",
+                "id": "cpptheme-icon",
+                "path": "icon/icon.json"
+            }
+        ],
+        "grammars": [
+            {
+                "scopeName": "module.injection",
+                "injectTo": [
+                    "source.cpp"
+                ],
+                "path": "grammar/module.json"
+            },
+            {
+                "scopeName": "noexcept.injection",
+                "injectTo": [
+                    "source.cpp"
+                ],
+                "path": "grammar/noexcept.json"
+            },
+            {
+                "scopeName": "preprocessor.injection",
+                "injectTo": [
+                    "source.cpp"
+                ],
+                "path": "grammar/preprocessor.json"
+            },
+            {
+                "scopeName": "punctuation.injection",
+                "injectTo": [
+                    "source.cpp"
+                ],
+                "path": "grammar/punctuation.json"
+            }
+        ],
+        "localizations": [
+            {
+                "languageId": "zh-cn",
+                "translations": [
+                    {
+                        "id": "vscode",
+                        "path": "locale/zh-cn.json"
+                    }
+                ]
+            }
+        ]
+    }
 }
