@@ -56,13 +56,14 @@ try {
     json["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyTree"]["from"]                      = "被调用 (called)"
     json["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyTree"]["to"]                        = "调用 (call)"
     json["contents"]["vs/workbench/contrib/typeHierarchy/browser/typeHierarchy.contribution"]["title"]            = "查看类型层次结构"
-    for (let file of await fs.promises.opendir(".tmp/i18n/vscode-language-pack-zh-hans/translations/extensions")) {
-        let subjson = JSON.parse((await fs.promises.readFile(file)).toString())
+    for await (let file of await fs.promises.opendir(".tmp/i18n/vscode-language-pack-zh-hans/translations/extensions")) {
+        let subjson = JSON.parse((await fs.promises.readFile(`.tmp/i18n/vscode-language-pack-zh-hans/translations/extensions/${file.name}`)).toString())
         json["contents"] += subjson["contents"]
     }
     await fs.promises.writeFile("locale/zh-cn.json", JSON.stringify(json, null, 4))
 } catch (_) {
     console.warn("warning: failed to update locale/zh-cn.json")
+    throw _
 } finally {
     await fs.promises.rm(".tmp", {recursive: true, force: true})
 }
