@@ -12,7 +12,6 @@
         "editor.findMatchBorder": "#ffffff",
         "editor.findMatchHighlightBackground": "#000000",
         "editor.findMatchHighlightBorder": "#808080",
-        "editor.hoverHighlightBackground": "#404040",
         "editor.selectionBackground": "#404040",
         "editor.snippetTabstopHighlightBackground": "#404040",
         "editorBracketMatch.background": "#000000",
