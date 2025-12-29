@@ -53,27 +53,27 @@ try {
     main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["references.noGeneric"]                 = "未找到调用 (call)"
     main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["references.no"]                        = "未找到\"{0}\"的调用 (call)"
     main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["peek.submenu"]                         = "查看"
-    main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchy.contribution"]["title"]            = "查看函数层次结构"
+    main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchy.contribution"]["title"]            = "查看调用层次结构 (call)"
     main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchy.contribution"]["title.incoming"]   = "显示被调用 (called)"
     main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchy.contribution"]["title.outgoing"]   = "显示调用 (call)"
     main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyPeek"]["callFrom"]                  = "\"{0}\"的被调用 (called)"
     main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyPeek"]["callsTo"]                   = "\"{0}\"的调用 (call)"
-    main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyPeek"]["empt.callsFrom"]            = "没有被其他函数调用"
-    main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyPeek"]["empt.callsTo"]              = "没有调用其他函数"
-    main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyTree"]["tree.aria"]                 = "函数层次结构"
+    main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyPeek"]["empt.callsFrom"]            = "没有被其他函数调用 (called)"
+    main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyPeek"]["empt.callsTo"]              = "没有调用其他函数 (call)"
+    main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyTree"]["tree.aria"]                 = "调用层次结构 (call)"
     main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyTree"]["from"]                      = "被调用 (called)"
     main["contents"]["vs/workbench/contrib/callHierarchy/browser/callHierarchyTree"]["to"]                        = "调用 (call)"
-    main["contents"]["vs/workbench/contrib/typeHierarchy/browser/typeHierarchy.contribution"]["title"]            = "查看类型层次结构"
+    main["contents"]["vs/workbench/contrib/typeHierarchy/browser/typeHierarchy.contribution"]["title"]            = "查看类型层次结构 (type)"
     await fs.promises.writeFile("locale/main.i18n.json", JSON.stringify(main, null, 4))
 
     // Update locale/extensions/*.i18n.json
     for await (let file of await fs.promises.opendir(".tmp/i18n/vscode-language-pack-zh-hans/translations/extensions"))
         if (file.name == "vscode.references-view.i18n.json") {
             let references_view = JSON.parse((await fs.promises.readFile(`.tmp/i18n/vscode-language-pack-zh-hans/translations/extensions/${file.name}`)).toString())
-            references_view["contents"]["package"]["cmd.references-view.findImplementations"] = "搜索所有虚实现 (virtual)"
-            references_view["contents"]["package"]["cmd.references-view.findReferences"]      = "搜索所有调用 (call)"
-            references_view["contents"]["package"]["cmd.references-view.showCallHierarchy"]   = "搜索函数层次结构"
-            references_view["contents"]["package"]["cmd.references-view.showTypeHierarchy"]   = "搜索类型层次结构"
+            references_view["contents"]["package"]["cmd.references-view.findReferences"]      = "搜索"
+            references_view["contents"]["package"]["cmd.references-view.findImplementations"] = "搜索虚实现 (virtual)"
+            references_view["contents"]["package"]["cmd.references-view.showCallHierarchy"]   = "搜索调用层次结构 (call)"
+            references_view["contents"]["package"]["cmd.references-view.showTypeHierarchy"]   = "搜索类型层次结构 (type)"
             await fs.promises.writeFile(`locale/extensions/${file.name}`, JSON.stringify(references_view, null, 4))
         }
         else
