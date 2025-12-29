@@ -59,6 +59,7 @@
         "terminal.findMatchBorder": "#ffffff",
         "terminal.findMatchHighlightBackground": "#000000",
         "terminal.findMatchHighlightBorder": "#808080",
+        "terminal.inactiveSelectionBackground": "#000000", // terminal.findMatchHighlightBackground is under it,
         "titleBar.activeBackground": "#000000",
         "titleBar.inactiveBackground": "#000000",
         "toolbar.hoverBackground": "#000000",
