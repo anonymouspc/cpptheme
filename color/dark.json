@@ -45,6 +45,7 @@
         "peekView.border": "#404040",
         "peekViewEditor.background": "#000000",
         "peekViewResult.background": "#000000",
+        "peekViewResult.selectionBackground": "#000000",
         "peekViewTitle.background": "#000000",
         "quickInput.background": "#101010",
         "quickInputList.focusBackground": "#202020",

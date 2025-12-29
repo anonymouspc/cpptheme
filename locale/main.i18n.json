@@ -5846,8 +5846,8 @@
             "title.refocus": "重新聚焦调用层次结构"
         },
         "vs/workbench/contrib/callHierarchy/browser/callHierarchyPeek": {
-            "callFrom": "被调用 (called)",
-            "callsTo": "调用 (call)",
+            "callFrom": "\"{0}\"的被调用 (called)",
+            "callsTo": "\"{0}\"的调用 (call)",
             "empt.callsFrom": "没有被其他函数调用",
             "empt.callsTo": "没有调用其他函数",
             "title.loading": "正在加载..."
