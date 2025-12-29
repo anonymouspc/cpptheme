@@ -5847,11 +5847,10 @@
         },
         "vs/workbench/contrib/callHierarchy/browser/callHierarchyPeek": {
             "callFrom": "被调用 (called)",
-            "callsTo": "\"{0}\"的调用方",
+            "callsTo": "调用 (call)",
             "empt.callsFrom": "没有被其他函数调用",
             "empt.callsTo": "没有调用其他函数",
-            "title.loading": "正在加载...",
-            "callTo": "调用 (call)"
+            "title.loading": "正在加载..."
         },
         "vs/workbench/contrib/callHierarchy/browser/callHierarchyTree": {
             "from": "被调用 (called)",
