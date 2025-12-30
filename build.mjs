@@ -30,13 +30,13 @@ try {
     // Update locale/main.i18n.json
     let main = JSON.parse((await fs.promises.readFile(".tmp/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json")).toString())
     main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["actions.goToDecl.label"]               = "转到实现 (implement)"
-    main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["actions.peekDecl.label"]               = "查看实现 (implement)"
     main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["actions.previewDecl.label"]            = "查看实现 (implement)"
-    main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["decl.title"]                           = "实现 (implement)"
     main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["def.title"]                            = "实现 (implement)" 
     main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["decl.generic.noResults"]               = "未找到实现 (implement)"
     main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["decl.noResultWord"]                    = "未找到\"{0}\"的实现 (implement)"
     main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["actions.goToDeclaration.label"]        = "转到声明 (declare)"
+    main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["actions.peekDecl.label"]               = "查看声明 (declare)"
+    main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["decl.title"]                           = "声明 (declare)"
     main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["actions.goToTypeDefinition.label"]     = "转到类型 (type)"
     main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["actions.peekTypeDefinition.label"]     = "查看类型 (type)"
     main["contents"]["vs/editor/contrib/gotoSymbol/browser/goToCommands"]["typedef.title"]                        = "类型 (type)"
