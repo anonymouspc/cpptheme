@@ -3,8 +3,8 @@
     "displayName": "cpptheme",
     "description": "cpptheme",
     "icon": "share/package.png",
-    "publisher": "anonymouspc",
-    "version": "1.1.72",
+    "publisher": "shyeyian",
+    "version": "1.1.75",
     "engines": {
         "vscode": "^1.100.0"
     },
@@ -14,7 +14,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/anonymouspc/vscode-cpptheme"
+        "url": "https://github.com/shyeyian/vscode-cpptheme"
     },
     "contributes": {
         "themes": [
