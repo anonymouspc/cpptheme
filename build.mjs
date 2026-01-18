@@ -82,7 +82,9 @@ try {
 
     // Update locale/extensions/*.i18n.json
     for await (let file of await fs.promises.opendir(path.join('.tmp', 'i18n', 'vscode-language-pack-zh-hans', 'translations', 'extensions')))
+        console.log(`iterating ${file}`)
         if (file.name == 'vscode.git.i18n.json') {
+            console.log(`git!`)
             let git = JSON.parse((await fs.promises.readFile(path.join('.tmp', 'i18n', 'vscode-language-pack-zh-hans', 'translations', 'extensions', file.name))).toString())
 			git['contents']['package']['command.commitSigned']               = '提交(署名)'
 			git['contents']['package']['command.commitSignedNoVerify']       = '提交(署名，不验证)'
@@ -95,6 +97,7 @@ try {
 			git['contents']['package']['{0} Checkout detached...']           = '{0} 签出(分离)…'
         }
         else if (file.name == 'vscode.references-view.i18n.json') {
+            console.log(`reference!`)
             let references_view = JSON.parse((await fs.promises.readFile(path.join('.tmp', 'i18n', 'vscode-language-pack-zh-hans', 'translations', 'extensions', file.name))).toString())
             references_view['contents']['package']['cmd.references-view.findReferences']      = '搜索'
             references_view['contents']['package']['cmd.references-view.findImplementations'] = '搜索虚实现 (virtual)'
